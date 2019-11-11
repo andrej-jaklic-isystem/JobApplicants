@@ -3,3 +3,10 @@
 ################################################################################
 
 /.vs
+/C#/Test01/.vs/Test01/v16/Server/sqlite3
+/C#/Test01/.vs/Test01
+*.dll
+*.pdb
+*.exe
+/C#/Test01/obj
+/C#/Test01/bin/Debug/netcoreapp3.0
