@@ -1,0 +1,86 @@
+﻿@model IEnumerable<Test01.Models.Topic>
+
+@{
+    ViewData["Title"] = "Topic index";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.IsVisible)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.PublishStart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PublishStop)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Content)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.AvgRating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumViews)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsVisible)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.PublishStart)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PublishStop)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Content)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.AvgRating)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumViews)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
