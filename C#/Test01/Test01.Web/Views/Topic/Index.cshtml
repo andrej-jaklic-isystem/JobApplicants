@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Test01.Data.Models.KB.Topic>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.IsVisible)
+            </th>
+            
+            <th>
+                Content
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.AvgRating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumViews)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+        <tr>
+            <td>
+                <b>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </b>
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.IsVisible)
+            </td>
+            
+            <td>
+                @Html.Raw(item.Content)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.AvgRating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumViews)
+            </td>
+           
+        </tr>
+        }
+    </tbody>
+</table>
