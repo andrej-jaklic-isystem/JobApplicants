@@ -21,10 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="AppData\Files\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Test01.Data\Test01.Data.csproj" />
   </ItemGroup>
 
